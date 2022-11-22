@@ -1,6 +1,13 @@
 NAME=pontus
 VERSION=1.0.0
 
+COMMIT_ID=$(shell git rev-parse --short HEAD)
+BRANCH_NAME=$(shell git rev-parse --abbrev-ref HEAD)
+
+IMG_TAG ?= ${BRANCH_NAME}-${COMMIT_ID}
+# IMG_TAG ?= latest
+IMG ?= colynn/pontus:${IMG_TAG}
+
 .PHONY: build
 ## build: Compile the packages.
 build:
@@ -26,6 +33,8 @@ run-prod: build
 clean:
 	@rm -f $(NAME)
 
+image: 
+	export DOCKER_BUILDKIT=1 ; docker build . -t ${IMG}
 
 .PHONY: help
 all: help

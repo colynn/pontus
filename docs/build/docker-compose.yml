@@ -1,7 +1,7 @@
 version: '3.1'
 
 services:
-  frontend:
+  pontus-ui:
     image: colynn/pontus-ui:latest
     container_name: "pontus-ui"
     networks:
@@ -13,7 +13,7 @@ services:
     volumes:
       - "./nginx:/etc/nginx/conf.d"
 
-  backend:
+  pontus-backend:
     image: colynn/pontus:latest
     container_name: "pontus-backend"
     networks:

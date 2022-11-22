@@ -19,9 +19,7 @@ ldap:
   host: ldap.example.com
   port: 389
   bindDN: ldap@example.com
-  # bindDN: cn=infra,ou=people,dc=domain,dc=example,dc=com
   bindPassword: authpassword
-  # userFilter: (name=%s)
   userFilter: (&(samaccountname=%s)(objectClass=user)(memberOf=CN=TECH, OU=Groups, OU=company,dc=company,dc=com))
   baseDN: OU=Company,DC=Company,DC=com
   skipped: false

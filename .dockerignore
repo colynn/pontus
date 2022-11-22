@@ -1,6 +1,9 @@
 # ignore .git
 .git
 
+config/dev.yaml
+config/local.yaml
+
 web 
 
 # binary
