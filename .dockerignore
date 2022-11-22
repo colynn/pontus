@@ -1,6 +1,8 @@
 # ignore .git
 .git
 
+web 
+
 # binary
 /cli
 /pontus

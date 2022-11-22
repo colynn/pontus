@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      title: '运维平台',
+      title: '运维平台'
       // logo: 'logo.png'
     }
   }

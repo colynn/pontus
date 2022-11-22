@@ -1,18 +1,31 @@
 <template>
   <div class="dashboard-container">
+    <div class="headerNotice">
+      您好，{{ name }}
+    </div>
+
+    <el-row>
+      <div class="headerNotice">系统更新日志</div>
+    </el-row>
   </div>
 </template>
+
 <script>
+import { mapGetters } from 'vuex'
+export default {
+  computed: {
+    ...mapGetters([
+      'name'
+    ])
+  }
+}
 </script>
 
 <style lang="scss" scoped>
-.dashboard {
-  &-container {
-    margin: 30px;
-  }
-  &-text {
-    font-size: 30px;
-    line-height: 46px;
-  }
+
+.headerNotice {
+  color: #595959;
+  padding: 20px;
 }
 </style>
+
