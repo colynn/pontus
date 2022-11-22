@@ -134,9 +134,9 @@
       </el-button>
 
       <div class="tips">
-        <a href="dingtalk://dingtalkclient/action/sendmsg?dingtalk_id=colynn" target="_blank" style="color: #fff">
+        <!-- <a href="https://github.com/colynn" target="_blank" style="color: #fff">
           无法登录？点击反馈
-        </a>
+        </a> -->
       </div>
     </el-form>
   </div>
