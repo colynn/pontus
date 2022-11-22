@@ -144,8 +144,6 @@
 
 <script>
 
-import { getCodeImg } from '@/api/login'
-
 export default {
   name: 'Login',
   data() {
@@ -190,7 +188,6 @@ export default {
     }
   },
   created() {
-    this.getCode()
   },
   mounted() {
     if (this.loginForm.username === '') {
@@ -200,13 +197,6 @@ export default {
     }
   },
   methods: {
-    getCode() {
-      getCodeImg().then(res => {
-        console.log(res)
-        this.codeUrl = res.data
-        this.loginForm.uuid = res.id
-      })
-    },
     checkCapslock({ shiftKey, key } = {}) {
       if (key && key.length === 1) {
         if (shiftKey && (key >= 'a' && key <= 'z') || !shiftKey && (key >= 'A' && key <= 'Z')) {
