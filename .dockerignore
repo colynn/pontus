@@ -1,0 +1,19 @@
+# ignore .git
+.git
+
+# binary
+/cli
+/pontus
+/alicollect
+
+# ignore all markdown file
+*.md 
+
+# tmp dir
+**/tmp
+
+# log dir
+**/logs
+
+# build dir
+**/build

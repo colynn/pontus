@@ -1,0 +1,18 @@
+.vscode/
+
+
+# binary file
+/__debug_bin
+/pontus
+
+
+# config local
+config/local.yaml
+
+# logs
+logs/ 
+
+
+# tmp file
+tmp
+.~*.xlsx

@@ -1,0 +1,37 @@
+application:
+  host: 0.0.0.0
+  name: pontus
+  port: 8000
+  readtimeout: 1
+  writertimeout: 2
+  initialize: false
+database:
+  database: pontus_00
+  dbtype: mysql
+  host: 127.0.0.1
+  password: root
+  port: 3306
+  username: root
+jwt:
+  secret: changemeforsecurity  # sensitive
+  timeout: 120  # unit: hour
+ldap:
+  host: ldap.example.com
+  port: 389
+  bindDN: ldap@example.com
+  bindPassword: authpassword
+  userFilter: (&(samaccountname=%s)(objectClass=user)(memberOf=CN=TECH, OU=Groups, OU=company,dc=company,dc=com))
+  baseDN: OU=Company,DC=Company,DC=com
+  skipped: false
+log:
+  auditlog: ./logs/pontus.log
+  # 日志级别(trace, info, warn, error, fatal)
+  # 指定日志的路径
+  rootPath: "logs"
+  # log mode support console,file
+  mode: console, file
+  console:
+    level: trace
+  file: 
+    level: trace
+    fileName: "pontus.log"
